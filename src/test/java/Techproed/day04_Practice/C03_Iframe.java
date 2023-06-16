@@ -54,7 +54,7 @@ public class C03_Iframe extends TestBase {
         Assert.assertTrue(youtube.isDisplayed());
 
         // 'Powerful,but easy to misuse' yazısının gorunur oldugunu test ediniz
-        driver.switchTo().parentFrame();
+        driver.switchTo().parentFrame();//iframe den cikmak icin gerekli
         WebElement power=driver.findElement(By.xpath("//* [@id='Powerful_but_easy_to_misuse']"));
         Assert.assertTrue(power.isDisplayed());
     }
