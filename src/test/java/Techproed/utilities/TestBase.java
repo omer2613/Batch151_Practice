@@ -19,8 +19,16 @@ public abstract class TestBase {
 
     }
 
+    public void bekle(int saniye) {
+        try {
+            Thread.sleep(saniye * 1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     @After
     public void tearDown() throws Exception {
-      // driver.quit();
+       //driver.quit();
     }
 }
